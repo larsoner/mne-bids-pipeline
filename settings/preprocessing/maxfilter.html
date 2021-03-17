@@ -558,6 +558,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#config.mf_cal_fname" class="md-nav__link">
+    mf_cal_fname
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#config.mf_ctc_fname" class="md-nav__link">
+    mf_ctc_fname
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -979,6 +993,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#config.mf_cal_fname" class="md-nav__link">
+    mf_cal_fname
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#config.mf_ctc_fname" class="md-nav__link">
+    mf_ctc_fname
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1113,6 +1141,64 @@ the recording session).</p>
 <p>Which run to take as the reference for adjusting the head position of all
 runs. If <code>None</code>, pick the first run.</p>
 <details class="example" open="open"><summary>Example</summary><div class="highlight"><pre><span></span><code><span class="n">mf_reference_run</span> <span class="o">=</span> <span class="s1">&#39;01&#39;</span>  <span class="c1"># Use run &quot;01&quot;</span>
+</code></pre></div>
+</details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h2 id="config.mf_cal_fname" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">mf_cal_fname</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span></code>
+
+
+<a href="#config.mf_cal_fname" class="headerlink" title="Permanent link">&para;</a></h2>
+
+    <div class="doc doc-contents first">
+
+      <div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This parameter should only be used for BIDS datasets that don't store
+ the fine-calibration file
+ <a href="https://bids-specification.readthedocs.io/en/stable/99-appendices/06-meg-file-formats.html#cross-talk-and-fine-calibration-files">according to BIDS</a>.</p>
+</div>
+<p>Path to the Maxwell Filter calibration file. If None the recommended
+location is used.</p>
+<details class="example" open="open"><summary>Example</summary><div class="highlight"><pre><span></span><code><span class="n">mf_cal_fname</span> <span class="o">=</span> <span class="s1">&#39;/path/to/your/file/calibration_cal.dat&#39;</span>
+</code></pre></div>
+</details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h2 id="config.mf_ctc_fname" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">mf_ctc_fname</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span></code>
+
+
+<a href="#config.mf_ctc_fname" class="headerlink" title="Permanent link">&para;</a></h2>
+
+    <div class="doc doc-contents first">
+
+      <p>Path to the Maxwell Filter cross-talk file. If None the recommended
+location is used.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This parameter should only be used for BIDS datasets that don't store
+ the cross-talk file
+ <a href="https://bids-specification.readthedocs.io/en/stable/99-appendices/06-meg-file-formats.html#cross-talk-and-fine-calibration-files">according to BIDS</a>.</p>
+</div>
+<details class="example" open="open"><summary>Example</summary><div class="highlight"><pre><span></span><code><span class="n">mf_ctc_fname</span> <span class="o">=</span> <span class="s1">&#39;/path/to/your/file/crosstalk_ct.fif&#39;</span>
 </code></pre></div>
 </details>
     </div>
