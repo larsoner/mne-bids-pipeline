@@ -9,6 +9,7 @@
 - Added a "Pipeline flow" section to the reports with an auto-generated diagram of the steps that ran for a subject and the files they passed to one another (#1291 by @larsoner)
 - Added [`report_image_format`][mne_bids_pipeline._config.report_image_format] config option to control the encoding of images embedded in reports, e.g. `dict(raster="png")` to trade larger reports for faster processing (#1300 by @larsoner)
 - Report HDF5 and HTML files are no longer rewritten when a step did not modify the report (requires MNE-Python ≥ 1.13; older versions keep the previous always-save behavior) (#1300 by @larsoner)
+- Added the [`dask_cluster`][mne_bids_pipeline._config.dask_cluster] option to attach to an external Dask cluster, e.g. on an HPC system via [dask-jobqueue](https://jobqueue.dask.org) (SLURM, PBS, SGE, …), with [`dask_worker_startup_timeout`][mne_bids_pipeline._config.dask_worker_startup_timeout] controlling how long to wait for queued workers; step log messages now also reach each Dask worker's log (e.g., the SLURM job log) (#1305 by @larsoner)
 
 ### :warning: Behavior changes
 
